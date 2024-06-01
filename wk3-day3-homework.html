@@ -73,6 +73,8 @@
   /* Now it's your turn to do the rest as seen on the preview */
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+
+  /* Half this number */
   function halfNumber(num) {
     var halfNumber = num / 2;
     document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + halfNumber;
@@ -84,6 +86,19 @@ halfButton.addEventListener("click", function() {
   halfNumber(num);
 });
 
+ /* Fraction */
+
+function percentageFromFraction(fraction, whole) {
+  var fractionOfWhole = (fraction / whole) * 100;
+  document.getElementById("solution").innerHTML = fraction +' ' + 'is ' + fractionOfWhole+'%' + ' of ' + whole;
+}
+  
+var fractionOfWholeBtn = document.getElementById("percent-button");
+fractionOfWholeBtn.addEventListener("click", function() {
+var fraction = parseInt(document.getElementById("percent1-input").value);
+var whole = parseInt(document.getElementById("percent2-input").value);
+percentageFromFraction(fraction, whole)
+});
 </script>
 </body>
 </html>
