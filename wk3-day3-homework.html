@@ -99,6 +99,18 @@ var fraction = parseInt(document.getElementById("percent1-input").value);
 var whole = parseInt(document.getElementById("percent2-input").value);
 percentageFromFraction(fraction, whole)
 });
+
+/* Integer */
+function nearestWholeNumber(num) {
+  var nearestInt = Math.round(num);
+  document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + ' is ' + nearestInt;
+}
+  
+var nearestWholeButton = document.getElementById("int-button");
+nearestWholeButton.addEventListener("click", function() {
+var num = parseFloat(document.getElementById("int-input").value);
+nearestWholeNumber(num);
+});
 </script>
 </body>
 </html>
